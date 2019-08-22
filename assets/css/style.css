@@ -1,9 +1,11 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background: url("../images/papyrus-dark.png");
 }
 
 .container{
-    background-color: green;
+    background: url("../images/papyrus-dark.png");
+    border: 1px white solid;
     
 }
 
@@ -11,44 +13,60 @@ body{
     margin-top: 60px
 }
 
+.gif-btn{
+    margin: 5px;
+}
+
 #buttons{
-    margin: auto;
-    
+    margin: auto;   
 }
-h1{
-    text-emphasis: bolder;
-}
+
+
 header{
     text-align: center;
     margin: 20 0 80 0;
-    padding-top: 80px;
+    padding-top: 40px;
+    text-emphasis: bolder;
+
 }
 
-img{
-    margin-bottom: 15px;
-    margin-right: 15px;
-    margin: auto;
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: white;
+    background: url("../images/papyrus-dark.png");
+}
 
+
+.gif-container{
+    margin-top: 30px;
+    text-align: center;
+    background-color: white;
+    margin: auto;
 }
 
 .characterDiv{
-    display:inline-block;
-    background-color: red;
-    margin-bottom: 20px;
-    margin: 0 10 20 10;
-    margin:auto;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    display:inline-block; 
+    background: url("../images/papyrus-dark.png");
+    border: solid 2px white;
+}
+
+.top{
+    border-bottom: 1px white solid
 }
 
 p{
     text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    color: white;
 }
+
+
 
 #new-gifs{
     margin-top: 40px;
-    background-color: darkgrey;
-    margin: auto;
+    background: url("../images/papyrus-dark.png");
     padding: 20px;
 }
 

@@ -17,9 +17,12 @@ $(document).ready(function () {
         }
     }
 
+    
+
     $("#buttons").on("click", "button", function () {   //this is short hand for saying for any button that is added onto the DOM at any point inside this div, do **this**
         // Grabbing and storing the data-name property value from the button
         var character = $(this).attr("data-name");
+        $(this).css({"color": "white", "background-color": "black"})
         console.log($(this))
         // Constructing a queryURL using the character name
         var apiKey = "&api_key=xpcO9JeJ5xXfr8vOQiZXgQKOetu5FX4C";
@@ -37,9 +40,7 @@ $(document).ready(function () {
                 console.log(response);
                 // storing the data from the AJAX request in the results variable
                 var results = response.data;
-                console.log(response.data)
-
-
+                console.log(response.data);
 
                 // Looping through each result item
                 for (var i = 0; i < 10; i++) {
@@ -47,16 +48,17 @@ $(document).ready(function () {
 
                     // Creating and storing a div tag
                     var characterDiv = $("<div>");
-                    characterDiv.addClass("characterDiv")
+                    characterDiv.addClass("characterDiv");
 
                     // Creating a paragraph tag with the result item's rating
-                    var p = $("<p>").text("Rating: " + results[i].rating);
+                    var p = $("<p>").text("Rating: " + results[i].rating.toUpperCase());
 
                     // Creating and storing an image tag
                     var characterImage = $("<img class='characterImage'>");
                     characterImage.attr("data-still", results[i].images.fixed_height_still.url);
                     characterImage.attr("data-animate", results[i].images.fixed_height.url);
                     characterImage.attr("data-state", "still");
+
                     // Setting the src attribute of the image to a property pulled off the result item
                     characterImage.attr("src", results[i].images.fixed_height_still.url);
 
@@ -76,14 +78,14 @@ $(document).ready(function () {
         event.preventDefault()
         for (i = 0; i < topics.length; i++) {
             if ($("#gif-input").val().toLowerCase().trim() === topics[i].toLowerCase()) {
-                alert("That button already exists")
-                $("#gif-input").val('')
+                alert("That button already exists");
+                $("#gif-input").val('');
                 return;
             }
         }
         if ($("#gif-input").val().trim() !== null && $("#gif-input").val().trim() !== "") {
             $("#buttons").empty();
-            var inputCharacter = $("#gif-input").val()
+            var inputCharacter = $("#gif-input").val();
             topics.push(inputCharacter);
             $('#gif-input').val('');
             populateButtons();
@@ -115,6 +117,10 @@ $(document).ready(function () {
 
 
     populateButtons();
+   
+
+
 
 
 })
+
