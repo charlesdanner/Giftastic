@@ -49,6 +49,7 @@ h1{
     display:inline-block; 
     background: url("../images/papyrus-dark.png");
     border: solid 2px white;
+    padding: 10px
 }
 
 .top{
@@ -62,12 +63,19 @@ p{
     color: white;
 }
 
+.btn-primary{
+    margin-right: 50px;
+}
+
+.fave-btn{
+    color: black;
+    background-color: gold;
+}
+
 
 
 #new-gifs{
-    margin-top: 40px;
     background: url("../images/papyrus-dark.png");
-    padding: 20px;
 }
 
 
