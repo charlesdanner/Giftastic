@@ -3,21 +3,13 @@ $(document).ready(function () {
 
     var topics = ["Arya", "Sansa", "Jon Snow", "Ned Stark", "Cersei"];
 
-    var favorites = [];
+    
 
     var newGifInt = 0;
 
     function populateButtons() {
         $("#buttons").empty();
 
-        for (var i = 0; i < favorites.length; i++) {
-
-            var newFavoriteButton = $("<button>").text(favorites[i]);
-            newFavoriteButton.addClass("fave-btn");
-            newFavoriteButton.attr("data-name", favorites[i]);
-            newFavoriteButton.attr("data-selected", false);
-            $("#buttons").append(newFavoriteButton);
-        }
 
         for (var i = 0; i < topics.length; i++) {
 
@@ -121,26 +113,7 @@ $(document).ready(function () {
         }
     })
 
-    $("#add-favorite").on("click", function (event) {
-        event.preventDefault();
-        console.log("chicken")
-        for (i = 0; i < favorites.length; i++) {
-            if ($("#favorite-input").val().toLowerCase().trim() === favorites[i].toLowerCase()) {
-                alert("That has  already been favorited");
-                $("#favorite-input").val('');
-                return;
-            }
-
-        } if ($("#favorite-input").val().trim() !== null && $("#favorite-input").val().trim() !== "") {
-            $("#buttons").empty();
-            var favoriteCharacter = $("#favorite-input").val();
-            favorites.push(favoriteCharacter);
-            console.log(favoriteCharacter);
-            console.log(favorites);
-            $('#favorite-input').val('');
-            populateButtons();
-        }
-    })
+    
 
     $("#new-gifs").on("click", "img", function () {
         var state = $(this).attr("data-state");

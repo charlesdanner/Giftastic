@@ -43,6 +43,7 @@ h1{
     text-align: center;
     background-color: white;
     margin: auto;
+    
 }
 
 .characterDiv{
@@ -52,8 +53,8 @@ h1{
     padding: 10px
 }
 
-.top{
-    border-bottom: 1px white solid
+.gif-form{
+    margin-top: 20px;
 }
 
 p{
@@ -66,13 +67,6 @@ p{
 .btn-primary{
     margin-right: 50px;
 }
-
-.fave-btn{
-    color: black;
-    background-color: gold;
-}
-
-
 
 #new-gifs{
     background: url("../images/papyrus-dark.png");
