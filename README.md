@@ -7,4 +7,4 @@ This is a simple Gif generator that is Game of Thrones themed. It uses the Giphy
 There are no prerequisites to using this application. It is run on the browser.
 
 ### Link to Live Site:
-link to live site: https://charlesdanner.github.io/Giftastic/
+[Live Version] (https://charlesdanner.github.io/Giftastic/)
