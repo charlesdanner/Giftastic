@@ -6,5 +6,9 @@ This is a simple Gif generator that is Game of Thrones themed. It uses the Giphy
 
 There are no prerequisites to using this application. It is run on the browser.
 
+## Under the Hood
+
+The GIPHY API is being accessed by using an AJAX call in Java Script. The query is being populated based on the contents within the button that the user presses. The Query has game of thrones preceding the user's input being read so that the gifs are 99% game of thrones related. The buttons are being populated by clearing out the div that they are contained in and storing the user inputs as new items in the array. From contents of the array are being accessed by a for loop and creating buttons with their contents being what is inside the array. The button's ID is equal to their HTML contents. The ID is accessed on click to generate the search query that the user is expecting. The data recieved is being parsed and stored in memory in divs that contain the still image, rating, and title. From there the images can be clicked in order to make them start moving (as GIFs normally do). This is done by assigning different data-states to each picture. If the data-state is still, then Java Script will remove the still and replace it with the gif on-click, and vice versa.
+
 ### Link to Live Site:
 [Live Version] (https://charlesdanner.github.io/Giftastic/)
